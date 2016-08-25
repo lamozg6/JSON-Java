@@ -94,6 +94,7 @@ public class Main {
         JsonArray msg = (JsonArray) readJsonObjectFromURL(sURL).get("data");
         for(JsonElement obj : msg)
         {
+            //if u don't want all parameters from obj then you must use substring
             Page newPage = gson.fromJson(obj.toString(), Page.class);
             likedPages.add(newPage);
         }
